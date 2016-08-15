@@ -35,20 +35,6 @@ public class TestFizzBuzz {
 	}
 	
 	@Test
-	public void testFizzBuzz1to20() {
-		int[] testIntArray = new int[20];
-		for (int i=0; i<20; i++) {
-			testIntArray[i]=i+1;
-		}
-		
-		ArrayList<String> ResultStringArray = FizzBuzz.generateStringArray(testIntArray);
-				
-		for (int i=0; i<20; i++) {
-			System.out.println(ResultStringArray.get(i));
-		}
-	}
-	
-	@Test
 	public void testGenerateWordCount() {
 		int[] testIntArray = new int[20];
 		for (int i=0; i<20; i++) {
