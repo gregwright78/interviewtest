@@ -1,8 +1,9 @@
 package test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.junit.Test;
 
@@ -46,5 +47,34 @@ public class TestFizzBuzz {
 			System.out.println(ResultStringArray.get(i));
 		}
 	}
+	
+	@Test
+	public void testGenerateWordCount() {
+		int[] testIntArray = new int[20];
+		for (int i=0; i<20; i++) {
+			testIntArray[i]=i+1;
+		}
+		
+		ArrayList<String> ResultStringArray = FizzBuzz.generateStringArray(testIntArray);
+		HashMap<String,Integer> wordCount = FizzBuzz.generateWordCount(ResultStringArray);
+		
+		for (int i=0; i<20; i++) {
+			System.out.println(ResultStringArray.get(i));
+		}
+		
+		HashMap<String, Integer> expectedResult = new HashMap<String, Integer>();
+		expectedResult.put("homeoffice", 2);
+		expectedResult.put("Buzz", 3);
+		expectedResult.put("Fizz", 4);
+		expectedResult.put("FizzBuzz", 1);
+		
+		assertEquals(wordCount.get("homeoffice"), expectedResult.get("homeoffice"));
+		assertEquals(wordCount.get("Buzz"), expectedResult.get("Buzz"));
+		assertEquals(wordCount.get("Fizz"), expectedResult.get("Fizz"));
+		assertEquals(wordCount.get("FizzBuzz"), expectedResult.get("FizzBuzz"));
+		
+	}
+	
+	
 
 }
