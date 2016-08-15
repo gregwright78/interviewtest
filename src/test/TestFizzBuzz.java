@@ -40,7 +40,7 @@ public class TestFizzBuzz {
 			testIntArray[i]=i+1;
 		}
 		
-		ArrayList<String> expectedResult = new ArrayList<String>();
+		ArrayList<String> ResultStringArray = FizzBuzz.generateStringArray(testIntArray);
 				
 		for (int i=0; i<20; i++) {
 			System.out.println(ResultStringArray.get(i));

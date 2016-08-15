@@ -7,7 +7,9 @@ public class FizzBuzz {
 	public static ArrayList<String> generateStringArray(int[] testIntArray) {
 		ArrayList<String> arrayListResult = new ArrayList<String>();		
 		for (int i=0; i<testIntArray.length; i++) {
-			if (testIntArray[i]%3==0 && testIntArray[i]%5==0) {
+			if ((testIntArray[i]%3==0 && testIntArray[i]/3==1) || testIntArray[i]%10==3 ) {
+				arrayListResult.add("homeoffice");
+			}else if (testIntArray[i]%3==0 && testIntArray[i]%5==0) {
 			arrayListResult.add("FizzBuzz");
 			} else if (testIntArray[i]%3==0) {
 				arrayListResult.add("Fizz");
